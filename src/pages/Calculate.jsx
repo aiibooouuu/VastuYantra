@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './calculate.css';
+import './Calculate.css';
 
 const directions = [
   'North-West', 'North', 'North-East',
