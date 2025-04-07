@@ -1,0 +1,161 @@
+.calculate-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-image: url('/vastu-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-y: auto;
+}
+
+.calculate-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(254, 250, 224, 0.85);
+    z-index: 0;
+}
+
+.section-title,
+.section-subtitle {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.section-title {
+    color: #283618;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #606C38;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.grid-result-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.vastu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-grow: 1;
+}
+
+.grid-cell {
+    background-color: #ffffffd5;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-cell label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #283618;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #bc6c25;
+    padding-bottom: 6px;
+}
+
+.grid-cell select {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #bc6c25;
+    background-color: #fefae0;
+    color: #283618;
+    font-weight: 600;
+}
+
+.calculate-button {
+    grid-column: span 3;
+    margin-top: 10px;
+    background-color: #bc6c25;
+    color: #fefae0;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.calculate-button:hover {
+    background-color: #7f2032;
+    font-weight: 600;
+}
+
+.score-summary {
+    flex-grow: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.93);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
+    font-size: 16px;
+    color: #283618;
+    line-height: 1.6;
+}
+
+.score-summary h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.score-summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.score-summary li {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #606C38;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .grid-result-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vastu-grid,
+    .score-summary {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .grid-cell {
+        height: auto;
+    }
+
+    .calculate-button {
+        width: 100%;
+    }
+}

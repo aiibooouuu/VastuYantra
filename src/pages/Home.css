@@ -1,0 +1,86 @@
+.home-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    background-image: url('/vastu-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    overflow-y: auto;
+    z-index: 1;
+    background-color: rgba(254, 250, 224, 0.82); /* soft warm overlay */
+}
+.home-container::-webkit-scrollbar{
+    display: none;
+}
+
+/* Transparent overlay for dimming background */
+.home-container::before {
+    height: 2540px;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(254, 250, 224, 0.82); /* soft warm overlay */
+    z-index: 0;
+}
+
+/* FAQ Item */
+.faq-item {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent */
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #283618;
+    font-size: 18px;
+    font-weight: bold;
+    height: 100vh;
+}
+
+/* Expanded FAQ background */
+.faq-item.expanded {
+    background-color: rgba(96, 108, 56, 1); /* #606C38 solid */
+    color: #fefae0;
+}
+
+/* FAQ question row */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Toggle icon (chevron or +/-) */
+.faq-toggle {
+    border: none;
+    background: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* FAQ answer animation setup */
+.faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, padding 0.3s ease, opacity 0.3s ease-in-out;
+    font-size: 16px;
+    color: inherit;
+    margin-top: 10px;
+}
+
+/* When answer is expanded */
+.faq-answer.show {
+    max-height: 1000px; /* Enough to fit large content */
+    padding: 1rem 0 0.5rem 0;
+    opacity: 1;
+}

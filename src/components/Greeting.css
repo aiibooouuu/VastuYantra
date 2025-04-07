@@ -1,0 +1,79 @@
+/* src/components/Greeting.css */
+.greeting-container {
+  position: relative;
+  height: 100vh;
+  background-color: #fefae0;
+  background-image: url('/vastu-bg.jpeg'); /* Replace with actual path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.greeting-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(254, 250, 224, 0.8); /* Slight transparency */
+  z-index: 1;
+}
+
+.greeting-content {
+  z-index: 2;
+  text-align: center;
+}
+
+.spinner {
+  border: 6px solid #ddd;
+  border-top: 6px solid #283618;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.quote {
+  font-style: italic;
+  color: #606C38;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  font-weight: 600;
+}
+
+.start-btn {
+  background-color: #bc6c25;
+  color: #dda15e;
+  border: none;
+  padding: 12px 24px;
+  font-size: 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+}
+
+.greeting-curve {
+  position: absolute;
+  left: 0; /* or right: 0; */
+  height: 100%;
+  width: 1400px; /* or whatever suits your layout */
+  z-index: 2;
+  pointer-events: none;
+}
+

@@ -1,0 +1,77 @@
+.remedies-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    background-image: url('/vastu-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.remedies-container::-webkit-scrollbar{
+    display: none;
+}
+.remedies-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(254, 250, 224, 0.82); /* cream overlay */
+    z-index: 0;
+    height: 1000px;
+}
+
+.remedy-item {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #283618;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.remedy-item.expanded {
+    background-color: rgba(96, 108, 56, 1); /* solid olive green */
+    color: #fefae0;
+}
+
+.remedy-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remedy-toggle {
+    border: none;
+    background: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    color: inherit;
+}
+
+.remedy-answer {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, padding 0.3s ease, opacity 0.3s ease-in-out;
+    font-size: 16px;
+    color: inherit;
+    margin-top: 10px;
+}
+
+.remedy-answer.show {
+    max-height: 500px;
+    padding: 1rem 0 0.5rem 0;
+    opacity: 1;
+}

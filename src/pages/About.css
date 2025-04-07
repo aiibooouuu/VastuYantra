@@ -1,0 +1,61 @@
+.about-container {
+    background-color: #fefae0;
+    background-image: url('/vastu-bg.jpeg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 30px;
+    color: #283618;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+}
+
+/* Overlay to give a semi-transparent wash */
+.about-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(254, 250, 224, 0.82); /* Cream overlay with transparency */
+    z-index: -1;
+}
+
+.about-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+
+.about-section h1,
+.about-section h2 {
+    color: #bc6c25;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.about-section strong {
+    color: #606C38;
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #606C38;
+    color: #fefae0;
+    border-left: 5px solid #bc6c25;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 6px;
+}
