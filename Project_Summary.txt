@@ -1,0 +1,58 @@
+VastuYantra - Setup Instructions
+
+A simple Vastu Calculator built using React. It allows users to input room placements in a 3x3 directional grid and calculates a Vastu compliance score. The app also provides ideal placement tips and remedies.
+
+---
+
+1. Install Node.js and npm:
+   - Download from: https://nodejs.org/
+   - Verify installation:
+     node -v
+     npm -v
+
+2. Install React globally (optional but helpful):
+   npm install -g create-react-app
+
+3. Clone the repository:
+   git clone https://github.com/aiibooouuu/VastuYantra.git
+   cd VastuYantra
+
+4. Install all dependencies:
+   npm install
+
+5. Start the app:
+   npm start
+
+---
+
+Libraries Used:
+- react
+- react-dom
+- react-router-dom
+- react-to-print (optional - for PDF export)
+- CSS for styling
+
+---
+
+Project Structure:
+
+VastuYantra/
+├── public/
+│   └── vastu-bg.jpeg
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Home.jsx
+│   │   ├── Calculate.jsx
+│   │   ├── Remedies.jsx
+│   │   └── FAQ.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── calculate.css
+├── package.json
+├── README.md
+└── INSTRUCTIONS.txt
+
+---
+
+That's it. You're good to go!
