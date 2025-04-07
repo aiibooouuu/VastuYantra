@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './remedies.css';
+import './Remedies.css';
 
 const remediesData = [
 
