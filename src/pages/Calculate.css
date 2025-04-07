@@ -159,3 +159,61 @@
         width: 100%;
     }
 }
+
+.vastu-intro-container {
+  background-color: rgba(255, 255, 255, 0.05); /* semi-transparent layer */
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  color: #fefae0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.intro-heading {
+  color: #bc6c25;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.intro-paragraph {
+  font-size: 1rem;
+  color: #fefae0;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.elements-heading {
+  font-size: 1.5rem;
+  color: #bc6c25;
+  margin-bottom: 1rem;
+}
+
+.elements-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.element-card {
+  flex: 1 1 18%;
+  background-color: rgba(96, 108, 56, 0.2); /* olive green overlay */
+  padding: 1rem;
+  border-radius: 10px;
+  color: #fefae0;
+  text-align: center;
+  min-width: 180px;
+  max-width: 220px;
+}
+
+.element-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sanskrit-name {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #fefae0;
+  opacity: 0.8;
+}

@@ -7,6 +7,7 @@ const Home = () => {
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  
 
   const faqs = [
     {
@@ -134,6 +135,59 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <div className="vastu-intro-container">
+  <h2 className="intro-heading">🪔 Vastu Shastra Introduction</h2>
+  <p className="intro-paragraph">
+    Vastu Shastra is the ancient Indian science of architecture and spatial design that harmonizes nature's five core elements—Earth, Water, Fire, Air, and Space—with your living or working environment. Rooted in spiritual wisdom and natural balance, Vastu aims to improve health, happiness, and prosperity by aligning spaces with universal energies. Whether you're planning a new home or making changes in an existing one, understanding these foundational principles can positively influence your lifestyle.
+  </p>
+
+  <h3 className="elements-heading">🌟 The Five Elements of Vastu Shastra</h3>
+  <div className="elements-row">
+    {[
+      {
+        emoji: "🌍",
+        name: "Earth",
+        sanskrit: "Prithvi",
+        icon: "🗻",
+        desc: "Represents stability, support, and strength. It governs the southwest direction and is vital for balance and grounded energy in a home."
+      },
+      {
+        emoji: "💧",
+        name: "Water",
+        sanskrit: "Jal",
+        icon: "🌊",
+        desc: "Symbolizes purification, flow, and abundance. Linked with the northeast direction, it brings clarity, intuition, and prosperity."
+      },
+      {
+        emoji: "🔥",
+        name: "Fire",
+        sanskrit: "Agni",
+        icon: "🔥",
+        desc: "Reflects energy, passion, and transformation. Associated with the southeast, fire is essential for vitality and kitchen placement."
+      },
+      {
+        emoji: "🌬️",
+        name: "Air",
+        sanskrit: "Vayu",
+        icon: "🍃",
+        desc: "Represents movement, creativity, and communication. The northwest direction governs air, influencing relationships and flexibility."
+      },
+      {
+        emoji: "🌌",
+        name: "Space",
+        sanskrit: "Aakash",
+        icon: "✨",
+        desc: "Denotes expansion, consciousness, and connection to the divine. Found at the center of the structure, it ties all other elements together."
+      }
+    ].map((el, index) => (
+      <div className="element-card" key={index}>
+        <div className="element-icon">{el.emoji}</div>
+        <h4>{el.name} <span className="sanskrit-name">({el.sanskrit})</span></h4>
+        <p>{el.desc}</p>
+      </div>
+    ))}
+  </div>
+</div>
       {faqs.map((faq, index) => (
         <div 
           key={index} 
