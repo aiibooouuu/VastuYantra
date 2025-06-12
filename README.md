@@ -1,12 +1,41 @@
-# React + Vite
+# 🧿 VastuYantra
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**VastuYantra** is a modern, interactive Vastu compliance checker built using React. It allows users to map their house layout onto a 3×3 grid, evaluate its alignment with Vastu Shastra principles, and receive a personalized score along with suggestions for improvement. Whether you're building, renovating, or just curious, VastuYantra provides a visually intuitive way to align your space for better energy flow and balance.  
 
-Currently, two official plugins are available:
+🔗 **Live Demo**: [vastu-yantra.vercel.app](https://vastu-yantra.vercel.app)  
+📁 **GitHub Repository**: [github.com/aiibooouuu/VastuYantra](https://github.com/aiibooouuu/VastuYantra)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🏠 **Interactive 3x3 Grid Layout** – Visually assign rooms like Bedroom, Kitchen, Toilet, etc., to different grid sections.
+- 📊 **Vastu Score Calculation** – Get an instant score based on classical Vastu principles.
+- 💡 **Remedies and Suggestions** – Receive actionable advice to enhance Vastu alignment.
+- 💬 **Live Chat Assistant** – Engage with a real-time support chatbot for personalized consultation.
+- 🎯 **Clean UI/UX** – Simple, responsive, and intuitive design built with React and Vite.
+
+---
+
+## 🚀 Tech Stack
+
+| Technology     | Description                         |
+|----------------|-------------------------------------|
+| ⚛️ React       | Frontend Framework                   |
+| ⚡ Vite        | Fast development build tool          |
+| 🎨 CSS         | Custom styling without UI libraries |
+| 🔁 React Hooks | State and effect management          |
+
+---
+
+## 📦 Installation
+
+Follow these steps to set up the project locally:
+
+```bash
+git clone https://github.com/aiibooouuu/VastuYantra.git
+cd VastuYantra
+npm install
+npm run dev
+```
+
